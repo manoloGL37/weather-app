@@ -37,6 +37,7 @@ export class MainAppComponent implements OnInit {
   showWeather(city: string) {
     this.weatherService.getWeather(city.trim()).subscribe({
       next: (res) => {
+        this.weatherService.notifyCityUpdated();
         console.log(res);
         this.city = res;
         this.icon = this.getLink();

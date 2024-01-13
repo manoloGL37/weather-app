@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { City } from '../../../models/weather.model';
+import { WeatherService } from '../../../services/weather.service';
 
 @Component({
   selector: 'app-left-panel',
@@ -22,7 +23,6 @@ export class LeftPanelComponent implements OnInit {
 
   getLink() {
     this.linkBase = `https://openweathermap.org/img/wn/${this.city.weather[0].icon}@4x.png`;
-    console.log(this.linkBase);
   }
 
 }

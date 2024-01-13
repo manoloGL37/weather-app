@@ -1,0 +1,11 @@
+<div class="flex flex-col items-center justify-center p-4 bg-[#303030] text-white rounded-md">
+    <h1 class="text-2xl ">{{ day }}</h1>
+    
+    <img class="size-3/4" [src]="linkBase" alt="">
+
+    <p class="text-1xl font-semibold mt-5">
+        {{ weather.main.temp_min.toFixed(0) }}º / {{ weather.main.temp_max.toFixed(0) }}º
+      </p>
+
+    <p class="capitalize">{{weather.weather[0].description}}</p>
+</div>

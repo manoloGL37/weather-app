@@ -1,0 +1,5 @@
+<div class="flex flex-nowrap gap-2 w-full justify-center items-center p-4">
+    @for (weather of city.list; track city.id) {
+        <app-forecast-card class="w-1/5" [weather]="weather"></app-forecast-card>
+    }
+</div>
