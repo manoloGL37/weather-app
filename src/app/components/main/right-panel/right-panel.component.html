@@ -1,7 +1,13 @@
-<div class="h-full border-spacing-2 ">
+<div class="flex flex-col justify-center gap-6 h-full border-spacing-2">
 
-    <div class="flex w-full">
-        <app-forecast-list class="w-full" [coords]="city.coord"></app-forecast-list>
+    <div class="flex flex-col gap-2 w-full">
+        <h2 class="pl-4 text-3xl font-semibold">Próximos 5 días</h2>
+        <app-forecast-list class="w-full" [city]="city"></app-forecast-list>
+    </div>
+
+    <div class="flex flex-col gap-2 w-full">
+        <h2 class="pl-4 text-3xl font-semibold">Viento y humedad</h2>
+        <app-wind-humidity class="w-full h-full pt-2 pl-4" [city]="cityWindHumidity" ></app-wind-humidity>
     </div>
 
 </div>

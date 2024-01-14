@@ -16,7 +16,6 @@ export class WeatherService {
   }
 
   httpClient = inject(HttpClient);
-  baseUrl = 'https://open-weather13.p.rapidapi.com/city';
   apiKey = '130c3b69d785440aa943fdc374331d8d';
 
   constructor() { 
@@ -27,7 +26,7 @@ export class WeatherService {
     return this.httpClient.get<any>(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=es&appid=${this.apiKey}`);
   }
 
-  getForecast(lat: number, lon: number) {
-    return this.httpClient.get<any>(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=es&appid=${this.apiKey}`);
+  getForecast(city: string) {
+    return this.httpClient.get<any>(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=es&appid=${this.apiKey}`);
   }
 }

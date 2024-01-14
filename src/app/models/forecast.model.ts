@@ -1,4 +1,4 @@
-export interface City {
+export interface CityForecast {
   cod: string;
   message: number;
   cnt: number;
@@ -35,6 +35,7 @@ export interface Weather {
   main: string;
   description: string;
   icon: string;
+  link: string;
 }
 
 export interface Clouds {
