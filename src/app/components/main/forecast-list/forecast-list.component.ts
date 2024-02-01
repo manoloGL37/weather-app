@@ -51,7 +51,6 @@ export class ForecastListComponent implements OnInit {
 
   // }
   getForecast() {
-    console.log(this.city)
     this.city.list = this.city.list.filter((list: any) => {
       return this.patternDaily.test(list.dt_txt);
     });

@@ -1,15 +1,15 @@
-<div class="flex flex-col items-center bg-[#303030] rounded-3xl text-white justify-center h-full w-full px-12">
+<div class="flex flex-col items-center bg-[#303030] rounded-3xl text-white justify-center h-full w-full py-8 lg:py-0 px-12">
   <p class="self-start mb-1"></p>
-  <h2 class="text-4xl font-semibold">{{ city.name }} <span class="text-sm">{{ city.sys.country }}</span> </h2>
+  <h2 class="text-2xl lg:text-4xl font-semibold">{{ city.name }} <span class="text-sm">{{ city.sys.country }}</span> </h2>
 
   <img [src]="icon" alt="{{ city.weather[0].main }}" />
 
-  <p class="text-2xl font-semibold mb-4 capitalize">{{ city.weather[0].description }}</p>
+  <p class="text-lg lg:text-2xl font-semibold mb-4 capitalize">{{ city.weather[0].description }}</p>
 
-  <p class="text-6xl font-semibold">{{ city.main.temp.toFixed(0) }}º</p>
+  <p class="text-4xl lg:text-6xl font-semibold">{{ city.main.temp.toFixed(0) }}º</p>
   
 
-  <p class="text-3xl font-semibold mt-5">
+  <p class="text-xl lg:text-3xl font-semibold mt-5">
     {{ city.main.temp_min.toFixed(0) }}º / {{ city.main.temp_max.toFixed(0) }}º
   </p>
 </div>
